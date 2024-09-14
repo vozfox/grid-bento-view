@@ -1,0 +1,319 @@
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #F5F5F5;
+  overflow-x: hidden;
+}
+.wraper{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  /* background-color: ; */
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4,20rem) ;
+  grid-template-areas: 
+  " itemBox1  itemBox2   .   itemBox3"
+  " .   .   .   ."
+  " itemBox4   itemBox5   itemBox7   ."
+  " .   itemBox6   itemBox8   ."
+  ;
+  gap: 2rem 2rem;
+  
+  
+}
+/* img{
+  height: 100px;
+} */
+.itemBox1{
+  background-color: #FAEEE2;
+  border-radius: 1rem;
+  grid-area: itemBox1;
+  grid-row: 1 / 3;
+}
+.itemBox1-text{
+  font-family: nunito;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 2rem;
+  padding: 6rem 0rem 1rem 1.5rem;
+  
+}
+.itemBox1-italic{
+  color: #734FD4;
+}
+.itemBox1-img{
+  height: 20%;
+  margin: 3rem 0rem 0rem 1.4rem;;
+}
+.itemBox2{
+  background-color: #7651DC;
+  max-height: 34rem;
+  border-radius: 1rem;
+  grid-area: itemBox2;
+  grid-row: 1 / 3;
+  grid-column: 2 / 4;
+}
+.itemBox2-text{
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: nunito;
+  padding: 9rem 4rem 2rem 4rem;
+}
+.itemBox2-yellowText{
+  color: rgb(255, 200, 0);
+}
+.itemBox-img{
+  height: 12%;
+  padding-left: 9rem;
+  margin-top: 3rem;
+}
+.itemBox2-smallText{
+  color: rgba(255, 255, 255, 0.646);
+  font-size: 1.5rem;
+  font-family: nunito;
+  padding-left: 12.5rem;
+}
+.itemBox3{
+  background-color: #DCD1FC;
+  grid-area: itemBox3;
+  border-radius: 1rem;
+  grid-row: 1 / 4;
+
+}
+.itemBox3-text{
+  color: black;
+  font-size: 2rem;
+  font-family: nunito;
+  padding: 3rem 5rem 1rem 1rem;
+}
+.itemBox3-img{
+  height: 13rem;
+  object-position: 6rem 0rem;
+  padding-left: 6.1rem;
+}
+.itemBox3-smallText{
+  color: black;
+  font-size: 2rem;
+  font-family: nunito;
+  padding: 3rem 5rem 1rem 1rem;
+}
+
+.itemBox4{
+  background-color: #FFCC69;
+  grid-area: itemBox4;
+  grid-row: 3 / 5;
+  border-radius: 1rem;
+}
+.itemBox4-text{
+  padding: 1rem 1rem 1rem 1rem;
+  font-family: nunito;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.itemBox4-img{
+  height: 18rem;
+  margin-left: 2rem;
+}
+.itemBox5{
+  background-color: #FFFFFF;
+  grid-area: itemBox5;
+  grid-row: 3 / 4;
+  border-radius: 1rem;
+}
+.itemBox5-img{
+  height: 70px;
+  object-position: 4rem;
+  border-radius: 1rem;
+}
+.itemBox5-text{
+  color: black;
+  padding: 3rem 5rem 1rem 2rem;
+  font-family: nunito;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.itemBox6{
+  background-color: #FFFFFF;
+  grid-area: itemBox6;
+  border-radius: 1rem;
+}
+.itemBox6-text{
+  font-size: 5rem;
+  font-family: nunito;
+  padding: 1rem 0rem 2rem 2rem;
+}
+.itemBox6-smallText{
+  font-size: 1.6rem;
+  font-family: nunito;
+  padding: 0rem 0rem 0rem 2.5rem;
+
+}
+.itemBox6-img{
+  height: 90px;
+  margin: 1rem 0rem 0rem 3rem;
+}
+.itemBox7{
+  background-color: #FFCC69;
+  grid-area: itemBox7;
+  border-radius: 1rem;
+}
+.itemBox7-text{
+  font-family: nunito;
+  font-size: 2rem;
+  padding: 1rem 10rem 0rem 1rem;
+}
+.itemBox7-img{
+  width: 100%;
+  object-position: 0rem 1rem;
+}
+.itemBox8{
+  background-color: #7651DC;
+  grid-area: itemBox8;
+  grid-column: 3 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem 1rem 4rem;
+  border-radius: 1rem;
+}
+.itemBox8-text{
+  color: white;
+  font-family: nunita;
+  font-size: 1.6rem;
+}
+.itemBox8-img{
+  height: 281px;
+}
+@media screen and (max-width:426px) {
+  .body{
+    overflow: hidden;
+  }
+  .container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+  .itemBox1{
+    order: 2;
+  }
+  .itemBox1-img{
+    height: 120px;
+  }
+  .itemBox1-text{
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    padding: 2rem 0rem 0rem 2rem;
+  }
+  .itemBox2{
+    order: 1;
+    font-size: 2.4rem;
+    height: 22rem;
+  }
+  .itemBox2-text{
+    padding: 2rem 1rem 0 1rem;
+  }
+  .itemBox-img {
+    height: 30px;
+    padding-left: 4rem;
+    margin-top: 2rem;
+}
+.itemBox2-smallText{
+  font-size: 1rem;
+  padding-left: 3.5rem;
+}
+  .itemBox3{
+    order: 3;
+    height: 27rem;
+  }
+  .itemBox3-text{
+    padding: 1rem 1rem 1rem 20px;
+    font-size: 1.4rem;
+  }
+  .itemBox3-img{
+  object-position: 0;
+  padding-left: 1rem;
+  height: 230px;
+  }
+  .itemBox3-smallText{
+    font-size: 1.2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+  }
+  .itemBox4{
+    order: 4;
+    height: 25rem;
+  }
+  .itemBox4-img{
+    height: 250px;
+  }
+  .itemBox5{
+    order: 5;
+    height: 10rem;
+  }
+  .itemBox5-text{
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.4rem;
+  }
+  .itemBox5-img{
+    object-position: 0;
+    height: 63px;
+  }
+  .itemBox6{
+    order: 6;
+    height: 12rem;
+  }
+  .itemBox6-text{
+    font-size: 3rem;
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .itemBox6-smallText{
+    font-size: 1.2rem;
+    padding: 0 0 0 1rem;
+  }
+  .itemBox6-img{
+    height: 60px;
+    margin: 1rem 0 0 1rem;
+  }
+  .itemBox7{
+    order: 7;
+    height: 20rem;
+    overflow: hidden;
+  }
+  .itemBox7-text{
+    padding: 1rem 0rem 0rem 1rem;
+    font-size: 2rem;
+  }
+  .itemBox7-img{
+    width: 210px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+  .itemBox8{
+    order:8;
+    display: block;
+    height: 22rem;
+  }
+  .itemBox8-img{
+    height: 170px;
+  }
+  .itemBox8-text{
+    font-size: 1.2rem;
+    font-family: nunito;
+    text-align: center;
+    margin: 2rem -6rem 1rem -4rem
+
+  }
+  
+}
+
+
+
